@@ -6,3 +6,21 @@
 //
 
 import Foundation
+import FirebaseFirestore
+
+final class DatabaseManager
+{
+    // variables
+    private let databaseHandler = Firestore.firestore()
+    
+    // initializer
+    private init()
+    {
+        // initializer code 
+    }
+    
+    // MARK: - Functions
+    
+    
+    
+}

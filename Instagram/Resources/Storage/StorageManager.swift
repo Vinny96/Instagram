@@ -6,3 +6,25 @@
 //
 
 import Foundation
+import FirebaseStorage
+
+final class StorageManager
+{
+    // variables
+    private let storageAccess = FirebaseStorage.Storage.storage()
+    
+    
+    
+    // Initializer
+    private init()
+    {
+        
+        
+    }
+    
+    // MARK: - Functions
+    
+}
+
+
+

@@ -6,3 +6,19 @@
 //
 
 import Foundation
+import FirebaseAnalytics
+
+final class AnalyticsManager
+{
+    // variables
+    static let sharedAnalyticsManagerObj = AnalyticsManager()
+    
+    // initializer
+    private init()
+    {
+        // initializer code
+    }
+    
+    
+    
+}
