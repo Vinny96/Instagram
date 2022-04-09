@@ -10,16 +10,24 @@ import UIKit
 
 class SignInHeaderView : UIView
 {
+    //MARK: - Variables
+    private var gradientLayer : CALayer?
+    
+    
+    
     //MARK: - System Called Functions
     override init(frame: CGRect)
     {
         super.init(frame: frame)
         clipsToBounds = true
+        createGradient()
     }
     
     override func layoutSubviews()
     {
         super.layoutSubviews()
+        gradientLayer?.frame = layer.bounds
+        
     }
     
     
@@ -35,9 +43,15 @@ class SignInHeaderView : UIView
     {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.systemBlue.cgColor, UIColor.systemPink.cgColor]
-        gradientLayer.frame = layer.bounds
         layer.addSublayer(gradientLayer)
+        self.gradientLayer = gradientLayer
     }
     
     
 }
+//MARK: - Notes
+/**
+ So lets explain what is happening here with the gradient layer. Notice here how for gthe gradient layer we are doing gradientLayer?.frame = layer.bounds . So the reason why we are doing this is because we want the gradientLayer to occupy the entire layer. So the layer.bounds is going to be whatever the the bounds of whatever the frame of this view is when we instantiate it. Hence why the gradient layer takes up the entire headerView and this is due to this line of code gradientLayer?.frame = layer.bounds
+ 
+ 
+ */
